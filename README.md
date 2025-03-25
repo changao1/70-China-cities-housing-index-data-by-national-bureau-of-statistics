@@ -1,2 +1,3 @@
 # 70-China-cities-housing-index-data-by-national-bureau-of-statistics
-Monthly 70 China cities housing index data published by national bureau of statistics, 2011.1-2024.12, cleaned by Chang Gao
+Monthly 70 China cities housing index data published by national bureau of statistics of China, the current data set contains data from 2011.1-2024.12, collected and cleaned by Chang Gao.
+The data is residential housing (商品住宅 in Chinese) price index (compare to the last month), and covers the overall new residential housing price index, the overall used residential housing price index, new-small, new-medium, new-large, used-small, used-medium, used-large residential housing price index. 8 indicies in total. 'small' refers to house of size smaller than or equal to 90 m^2, 'medium' refers to house of size between 90-144 m^2 (including 144 m^2), 'large' refers to house of size larger than 144 m^2.
