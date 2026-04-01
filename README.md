@@ -4,7 +4,7 @@ Monthly housing price index data for 70 major Chinese cities, published by the N
 
 (Easy to see, the new housing price index for Shanghai looks a bit strange here, the used ones look to be fine.)
 
-**Current coverage: 2011.1 - 2026.2**
+**Coverage: 2011.1 - Current Month**
 
 ## Data Description
 
