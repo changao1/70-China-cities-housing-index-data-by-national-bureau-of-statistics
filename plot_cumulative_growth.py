@@ -86,10 +86,12 @@ def plot_index(cumulative, title, filename):
     ax.set_xlim(ax.get_xlim()[0], ax.get_xlim()[1] + 1.5)
 
     plt.tight_layout()
-    filepath = os.path.join(PLOTS_DIR, filename)
-    plt.savefig(filepath, dpi=150, bbox_inches='tight')
+    png_path = os.path.join(PLOTS_DIR, filename)
+    pdf_path = os.path.join(PLOTS_DIR, filename.replace('.png', '.pdf'))
+    plt.savefig(png_path, dpi=150, bbox_inches='tight')
+    plt.savefig(pdf_path, bbox_inches='tight')
     plt.close(fig)
-    print(f'  Saved {filename}')
+    print(f'  Saved {filename} + .pdf')
 
 
 def main():
