@@ -2,7 +2,7 @@
 
 Monthly housing price index data for 70 major Chinese cities, published by the National Bureau of Statistics of China. Collected and cleaned by Chang Gao.
 
-(The index for Shanghai looks a bit strange here..)
+(Easy to see, the new housing price index for Shanghai looks a bit strange here, the used ones look to be fine.)
 
 **Current coverage: 2011.1 - 2026.2**
 
