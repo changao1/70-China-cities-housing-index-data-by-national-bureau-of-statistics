@@ -19,13 +19,37 @@ The dataset (`merged_housing_data_eng.csv`) contains monthly residential housing
 | `second_medium_house_index` | Used residential, 90-144m² |
 | `second_large_house_index` | Used residential, larger than 144m² |
 
+## Cumulative Growth Charts
+
+All charts use Dec 2010 = 100 as the base. Updated automatically each month.
+
+### New Residential Housing
+
+![New House Price Index (Overall)](plots/new_house_price_index_cumulative.png)
+
+![New House Price Index (≤90m²)](plots/new_small_house_index_cumulative.png)
+
+![New House Price Index (90-144m²)](plots/new_medium_house_index_cumulative.png)
+
+![New House Price Index (>144m²)](plots/new_large_house_index_cumulative.png)
+
+### Second-hand Residential Housing
+
+![Second-hand House Price Index (Overall)](plots/second_hand_price_index_cumulative.png)
+
+![Second-hand House Price Index (≤90m²)](plots/second_small_house_index_cumulative.png)
+
+![Second-hand House Price Index (90-144m²)](plots/second_medium_house_index_cumulative.png)
+
+![Second-hand House Price Index (>144m²)](plots/second_large_house_index_cumulative.png)
+
 ## Automated Monthly Updates
 
 A GitHub Actions workflow runs on the 28th of each month to automatically:
 
 1. Fetch new data pages from [stats.gov.cn](https://www.stats.gov.cn/sj/zxfb/)
 2. Parse the HTML tables and extract month-on-month indices
-3. Append new rows to the CSV and commit
+3. Append new rows to the CSV, regenerate plots, and commit
 
 The workflow can also be triggered manually from the Actions tab.
 
@@ -39,6 +63,9 @@ python3 add_data/fetch_new_data.py
 
 # Parse and append to CSV
 python3 add_data/update_data.py
+
+# Regenerate plots
+python3 plot_cumulative_growth.py
 ```
 
 Or place HTML files manually as `add_data/YYYYMM.html` and run `update_data.py`. Duplicate months are automatically skipped.

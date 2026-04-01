@@ -20,7 +20,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install beautifulsoup4
+        run: pip install beautifulsoup4 matplotlib pandas numpy
 
       - name: Fetch new data from stats.gov.cn
         run: python add_data/fetch_new_data.py
@@ -28,11 +28,14 @@ jobs:
       - name: Parse HTML and update CSV
         run: python add_data/update_data.py
 
+      - name: Regenerate plots
+        run: python plot_cumulative_growth.py
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add add_data/*.html merged_housing_data_eng.csv
+          git add add_data/*.html merged_housing_data_eng.csv plots/*.png
           if git diff --cached --quiet; then
             echo "No new data to commit"
           else
