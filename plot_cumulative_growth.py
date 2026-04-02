@@ -83,7 +83,12 @@ def plot_index(cumulative, title, filename):
     ax.set_ylabel('Cumulative Price Index (Base: Dec 2010=100)', fontsize=12)
     ax.set_title(f'Cumulative Growth of {title} (Base: Dec 2010=100)',
                  fontsize=14, fontweight='bold')
-    ax.set_xlim(ax.get_xlim()[0], ax.get_xlim()[1] + 1.5)
+    xlim = ax.get_xlim()
+    ax.set_xlim(xlim[0], xlim[1] + 1.0)
+    year_end = int(np.floor(xlim[1]))  # use data range, not padded xlim
+    xticks = [2011] + list(range(2012, year_end + 1, 2))
+    ax.set_xticks(xticks)
+    ax.set_xticklabels([str(y) for y in xticks])
 
     plt.tight_layout()
     png_path = os.path.join(PLOTS_DIR, filename)
