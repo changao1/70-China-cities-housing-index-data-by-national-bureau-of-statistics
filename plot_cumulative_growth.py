@@ -15,14 +15,14 @@ CSV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'merged_hous
 
 # All 8 indices and their display titles / filenames
 INDICES = [
-    ('new_house_price_index',        'New House Price Index (Overall)'),
-    ('second_hand_price_index',      'Second-hand House Price Index (Overall)'),
-    ('new_small_house_index',        'New House Price Index (≤90m²)'),
-    ('new_medium_house_index',       'New House Price Index (90-144m²)'),
-    ('new_large_house_index',        'New House Price Index (>144m²)'),
-    ('second_small_house_index',     'Second-hand House Price Index (≤90m²)'),
-    ('second_medium_house_index',    'Second-hand House Price Index (90-144m²)'),
-    ('second_large_house_index',     'Second-hand House Price Index (>144m²)'),
+    ('new_home_price_index',         'New Home Price Index (Overall)'),
+    ('existing_home_price_index',    'Existing Home Price Index (Overall)'),
+    ('new_small_home_index',         'New Home Price Index (≤90m²)'),
+    ('new_medium_home_index',        'New Home Price Index (90-144m²)'),
+    ('new_large_home_index',         'New Home Price Index (>144m²)'),
+    ('existing_small_home_index',    'Existing Home Price Index (≤90m²)'),
+    ('existing_medium_home_index',   'Existing Home Price Index (90-144m²)'),
+    ('existing_large_home_index',    'Existing Home Price Index (>144m²)'),
 ]
 
 # Cities to label: top/bottom performers + major cities

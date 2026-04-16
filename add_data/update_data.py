@@ -60,7 +60,7 @@ def parse_float(s):
 
 def parse_table_1_2(table):
     """
-    Parse Table 1 or 2 (new/used housing price index).
+    Parse Table 1 or 2 (new/existing housing price index).
     January layout (6 cols): [city1 | 环比 | 同比 | city2 | 环比 | 同比]
     Other months (8 cols): [city1 | 环比 | 同比 | 1-X月平均 | city2 | 环比 | 同比 | 1-X月平均]
     Skip first 2 header rows. Returns dict: {city_cn: huanbi_value}
@@ -140,26 +140,26 @@ def parse_html_file(filepath):
         return []
 
     # Take first 6 tables (the first content div)
-    t1 = tables[0]  # new house price index
-    t2 = tables[1]  # used house price index
+    t1 = tables[0]  # new home price index
+    t2 = tables[1]  # existing home price index
     t3a = tables[2]  # new by size (一) - first 35 cities
     t3b = tables[3]  # new by size (二) - next 35 cities
-    t4a = tables[4]  # used by size (一) - first 35 cities
-    t4b = tables[5]  # used by size (二) - next 35 cities
+    t4a = tables[4]  # existing by size (一) - first 35 cities
+    t4b = tables[5]  # existing by size (二) - next 35 cities
 
     new_price = parse_table_1_2(t1)
-    used_price = parse_table_1_2(t2)
+    existing_price = parse_table_1_2(t2)
     new_size_a = parse_table_3_4_half(t3a)
     new_size_b = parse_table_3_4_half(t3b)
-    used_size_a = parse_table_3_4_half(t4a)
-    used_size_b = parse_table_3_4_half(t4b)
+    existing_size_a = parse_table_3_4_half(t4a)
+    existing_size_b = parse_table_3_4_half(t4b)
 
     # Merge size tables
     new_size = {**new_size_a, **new_size_b}
-    used_size = {**used_size_a, **used_size_b}
+    existing_size = {**existing_size_a, **existing_size_b}
 
     # Collect all cities
-    all_cities = set(new_price) | set(used_price) | set(new_size) | set(used_size)
+    all_cities = set(new_price) | set(existing_price) | set(new_size) | set(existing_size)
 
     rows = []
     for city_cn in sorted(all_cities):
@@ -169,20 +169,20 @@ def parse_html_file(filepath):
             continue
 
         new_s = new_size.get(city_cn, ('', '', ''))
-        used_s = used_size.get(city_cn, ('', '', ''))
+        existing_s = existing_size.get(city_cn, ('', '', ''))
 
         rows.append({
             'city': city_en,
             'year': year,
             'month': month,
-            'new_house_price_index': new_price.get(city_cn, ''),
-            'second_hand_price_index': used_price.get(city_cn, ''),
-            'new_small_house_index': new_s[0],
-            'new_medium_house_index': new_s[1],
-            'new_large_house_index': new_s[2],
-            'second_small_house_index': used_s[0],
-            'second_medium_house_index': used_s[1],
-            'second_large_house_index': used_s[2],
+            'new_home_price_index': new_price.get(city_cn, ''),
+            'existing_home_price_index': existing_price.get(city_cn, ''),
+            'new_small_home_index': new_s[0],
+            'new_medium_home_index': new_s[1],
+            'new_large_home_index': new_s[2],
+            'existing_small_home_index': existing_s[0],
+            'existing_medium_home_index': existing_s[1],
+            'existing_large_home_index': existing_s[2],
         })
 
     return rows
@@ -230,11 +230,11 @@ def main():
     # Append to CSV
     if new_rows:
         fieldnames = [
-            'city', 'year', 'month', 'new_house_price_index',
-            'second_hand_price_index', 'new_small_house_index',
-            'new_medium_house_index', 'new_large_house_index',
-            'second_small_house_index', 'second_medium_house_index',
-            'second_large_house_index'
+            'city', 'year', 'month', 'new_home_price_index',
+            'existing_home_price_index', 'new_small_home_index',
+            'new_medium_home_index', 'new_large_home_index',
+            'existing_small_home_index', 'existing_medium_home_index',
+            'existing_large_home_index'
         ]
         with open(csv_path, 'a', encoding='utf-8', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)

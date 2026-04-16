@@ -2,7 +2,7 @@
 
 Monthly housing price index data for 70 major Chinese cities, published by the National Bureau of Statistics of China. Collected and cleaned by Chang Gao.
 
-(Easy to see, the new housing price index for Shanghai looks a bit strange here, the used ones look to be fine.)
+(Easy to see, the new housing price index for Shanghai looks a bit strange here, the existing home ones look to be fine.)
 
 **Coverage: 2011.1 - Current Month**
 
@@ -12,14 +12,14 @@ The dataset (`merged_housing_data_eng.csv`) contains monthly residential housing
 
 | Column | Description |
 |---|---|
-| `new_house_price_index` | New residential housing price index (overall) |
-| `second_hand_price_index` | Used residential housing price index (overall) |
-| `new_small_house_index` | New residential, 90m² or smaller |
-| `new_medium_house_index` | New residential, 90-144m² |
-| `new_large_house_index` | New residential, larger than 144m² |
-| `second_small_house_index` | Used residential, 90m² or smaller |
-| `second_medium_house_index` | Used residential, 90-144m² |
-| `second_large_house_index` | Used residential, larger than 144m² |
+| `new_home_price_index` | New residential housing price index (overall) |
+| `existing_home_price_index` | Existing residential housing price index (overall) |
+| `new_small_home_index` | New residential, 90m² or smaller |
+| `new_medium_home_index` | New residential, 90-144m² |
+| `new_large_home_index` | New residential, larger than 144m² |
+| `existing_small_home_index` | Existing residential, 90m² or smaller |
+| `existing_medium_home_index` | Existing residential, 90-144m² |
+| `existing_large_home_index` | Existing residential, larger than 144m² |
 
 ## Cumulative Growth Charts
 
@@ -27,23 +27,23 @@ All charts use Dec 2010 = 100 as the base. Updated automatically each month.
 
 ### New Residential Housing
 
-![New House Price Index (Overall)](plots/new_house_price_index_cumulative.png)
+![New Home Price Index (Overall)](plots/new_home_price_index_cumulative.png)
 
-![New House Price Index (≤90m²)](plots/new_small_house_index_cumulative.png)
+![New Home Price Index (≤90m²)](plots/new_small_home_index_cumulative.png)
 
-![New House Price Index (90-144m²)](plots/new_medium_house_index_cumulative.png)
+![New Home Price Index (90-144m²)](plots/new_medium_home_index_cumulative.png)
 
-![New House Price Index (>144m²)](plots/new_large_house_index_cumulative.png)
+![New Home Price Index (>144m²)](plots/new_large_home_index_cumulative.png)
 
-### Second-hand Residential Housing
+### Existing Residential Housing
 
-![Second-hand House Price Index (Overall)](plots/second_hand_price_index_cumulative.png)
+![Existing Home Price Index (Overall)](plots/existing_home_price_index_cumulative.png)
 
-![Second-hand House Price Index (≤90m²)](plots/second_small_house_index_cumulative.png)
+![Existing Home Price Index (≤90m²)](plots/existing_small_home_index_cumulative.png)
 
-![Second-hand House Price Index (90-144m²)](plots/second_medium_house_index_cumulative.png)
+![Existing Home Price Index (90-144m²)](plots/existing_medium_home_index_cumulative.png)
 
-![Second-hand House Price Index (>144m²)](plots/second_large_house_index_cumulative.png)
+![Existing Home Price Index (>144m²)](plots/existing_large_home_index_cumulative.png)
 
 ## Automated Monthly Updates
 

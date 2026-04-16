@@ -1,4 +1,4 @@
-city,year,month,new_house_price_index,second_hand_price_index,new_small_house_index,new_medium_house_index,new_large_house_index,second_small_house_index,second_medium_house_index,second_large_house_index
+city,year,month,new_home_price_index,existing_home_price_index,new_small_home_index,new_medium_home_index,new_large_home_index,existing_small_home_index,existing_medium_home_index,existing_large_home_index
 Sanya,2011,1,100.4,100.7,100.2,100.2,100.7,100.2,101.0,101.0
 Shanghai,2011,1,101.1,100.5,102.1,101.4,100.4,100.7,100.2,100.4
 Dandong,2011,1,100.6,100.3,101.3,100.3,99.6,100.5,100.0,100.1
