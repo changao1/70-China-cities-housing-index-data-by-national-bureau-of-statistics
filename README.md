@@ -62,6 +62,21 @@ All charts use Dec 2010 = 100 as the base. Updated automatically each month.
 
 ![Existing Home Price Index (>144m²)](plots/existing_large_home_index_cumulative.png)
 
+## Supplementary Data
+
+The [supplementary/](supplementary/) folder contains annual average listing prices (RMB/m²) scraped from two popular Chinese real-estate platforms. They complement the NBS index data by providing absolute price levels and wider city coverage (~350 cities vs. 70). Useful for anchoring the index to real prices or for cross-validation.
+
+| File | Source | Cities | Years |
+|---|---|---|---|
+| [58tongcheng_city_avg_price_annual_2010-2024.csv](supplementary/58tongcheng_city_avg_price_annual_2010-2024.csv) | 58.com | 365 | 2010-2024 |
+| [anjuke_city_avg_price_annual_2015-2024.csv](supplementary/anjuke_city_avg_price_annual_2015-2024.csv) | anjuke.com | 349 | 2015-2024 |
+
+Columns: `province`, `city`, `year`, `price_yuan_per_sqm`, `yoy_pct` (year-over-year % change, computed from `price_yuan_per_sqm`; blank for each city's first year).
+
+A single 2×2 overview compares the two platforms across every city in each dataset. Columns = source (58.com / anjuke.com), rows = view (absolute price in RMB/m² on log scale / cumulative growth with 2015 = 100). All cities render as a faint grey "cloud"; the cross-city median is overlaid as a dark reference line; ~12 strategic cities are highlighted in color with English labels. Cumulative panels only include cities with 2015 data. Regenerate with `python3 supplementary/plot_listing_prices.py`.
+
+![Platforms overview — 58.com vs anjuke.com](supplementary/plots/platforms_overview_2x2.png)
+
 ## Automated Monthly Updates
 
 A GitHub Actions workflow runs on the 28th of each month to automatically:
