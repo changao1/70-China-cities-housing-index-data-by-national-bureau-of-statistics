@@ -36,7 +36,22 @@ _As of 2026-02. Peak = each city's all-time high cumulative index since Dec 2010
 _New Home stats exclude Shanghai due to known data anomalies._
 <!-- STATS_END -->
 
-See [stats.md](stats.md) / [stats.json](stats.json) for the same numbers plus per-city detail.
+## Growth at Price Peak
+
+<!-- GROWTH_START -->
+_As of 2026-02. Growth at price peak = each city's cumulative growth from Dec 2010 (base=100, period 0) to its all-time peak. Measures how much prices rose at each city's highest point relative to the start of the series._
+
+| Metric | New Home | Existing Home |
+|---|---|---|
+| Avg growth at price peak, 30 top-growth cities | +83.67% | +59.84% |
+| Avg growth at price peak, all cities (69 / 70) | +60.37% | +38.97% |
+| Biggest growth at price peak | **Shenzhen** +149.42% (peak 2022-06) | **Shenzhen** +178.88% (peak 2021-03) |
+| Smallest growth at price peak | **Wenzhou** +0.80% (peak 2011-07) | **Jinzhou** +2.21% (peak 2014-04) |
+
+_New Home stats exclude Shanghai due to known data anomalies._
+<!-- GROWTH_END -->
+
+See [stats.md](stats.md) / [stats.json](stats.json) for the same numbers plus per-city detail (both drop and growth).
 
 ## Cumulative Growth Charts
 

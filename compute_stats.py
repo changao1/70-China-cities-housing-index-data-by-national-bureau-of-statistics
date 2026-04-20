@@ -1,9 +1,12 @@
 """
 Compute each city's drop from its all-time-peak cumulative price index
-(base Dec 2010 = 100), for new-home and existing-home overall indices.
+and its growth at price peak relative to Dec 2010 (period 0, base = 100)
+— i.e. how much the city rose from the start of the series to its all-time
+peak — for new-home and existing-home overall indices.
 
-Writes stats.md, stats.json, and refreshes the block between
-<!-- STATS_START --> / <!-- STATS_END --> in README.md.
+Writes stats.md, stats.json, and refreshes the blocks between
+<!-- STATS_START --> / <!-- STATS_END --> (drop) and
+<!-- GROWTH_START --> / <!-- GROWTH_END --> (growth at price peak) in README.md.
 """
 
 import json
@@ -32,15 +35,20 @@ EXCLUDE = {
 TOP_N = 30
 STATS_START = '<!-- STATS_START -->'
 STATS_END = '<!-- STATS_END -->'
+GROWTH_START = '<!-- GROWTH_START -->'
+GROWTH_END = '<!-- GROWTH_END -->'
+BASELINE = 100.0
 
 
-def compute_drops(df, col):
-    """For each city: peak (all-time max cumulative), current (last cumulative),
-    drop_pct = (current - peak) / peak * 100 (<= 0), and peak_date YYYY-MM."""
+def compute_city_stats(df, col):
+    """For each city: peak (all-time max cumulative since Dec 2010 = 100),
+    current (last cumulative), drop_pct = (current - peak) / peak * 100 (<= 0),
+    peak_growth_pct = (peak - baseline) / baseline * 100 (cumulative growth
+    from period 0 to the peak), peak_date YYYY-MM."""
     out = {}
     for city in df['city'].unique():
         city_data = df[df['city'] == city].sort_values(['year', 'month'])
-        cum = 100.0
+        cum = BASELINE
         cum_list = []
         dates = []
         for _, row in city_data.iterrows():
@@ -54,11 +62,14 @@ def compute_drops(df, col):
         peak = float(arr[peak_idx])
         current = float(arr[-1])
         drop_pct = (current - peak) / peak * 100.0
+        peak_growth_pct = (peak - BASELINE) / BASELINE * 100.0
         out[city] = {
             'peak': round(peak, 4),
             'current': round(current, 4),
             'drop_pct': round(drop_pct, 4),
             'peak_date': f'{dates[peak_idx][0]}-{dates[peak_idx][1]:02d}',
+            'baseline': BASELINE,
+            'peak_growth_pct': round(peak_growth_pct, 4),
         }
     return out
 
@@ -78,6 +89,24 @@ def summarize(drops):
         'all_avg_drop_pct': round(all_avg, 4),
         'biggest_drop': {'city': worst_city, 'drop_pct': worst['drop_pct'], 'peak_date': worst['peak_date']},
         'smallest_drop': {'city': best_city, 'drop_pct': best['drop_pct'], 'peak_date': best['peak_date']},
+    }
+
+
+def summarize_growth(stats):
+    ranked = sorted(stats.items(), key=lambda kv: kv[1]['peak_growth_pct'], reverse=True)
+    n = len(ranked)
+    top_n = ranked[:TOP_N]
+    top_n_avg = sum(v['peak_growth_pct'] for _, v in top_n) / len(top_n)
+    all_avg = sum(v['peak_growth_pct'] for _, v in ranked) / n
+    best_city, best = ranked[0]
+    worst_city, worst = ranked[-1]
+    return {
+        'n_cities': n,
+        'top_n': TOP_N,
+        'top_n_avg_peak_growth_pct': round(top_n_avg, 4),
+        'all_avg_peak_growth_pct': round(all_avg, 4),
+        'biggest_peak_growth': {'city': best_city, 'peak_growth_pct': best['peak_growth_pct'], 'peak_date': best['peak_date']},
+        'smallest_peak_growth': {'city': worst_city, 'peak_growth_pct': worst['peak_growth_pct'], 'peak_date': worst['peak_date']},
     }
 
 
@@ -110,14 +139,32 @@ def build_block(as_of, stats):
     return '\n'.join(lines)
 
 
-def update_readme(block):
+def build_growth_block(as_of, stats):
+    n = stats['new_home_price_index']
+    e = stats['existing_home_price_index']
+    lines = [
+        f'_As of {as_of}. Growth at price peak = each city\'s cumulative growth from Dec 2010 (base=100, period 0) to its all-time peak. Measures how much prices rose at each city\'s highest point relative to the start of the series._',
+        '',
+        '| Metric | New Home | Existing Home |',
+        '|---|---|---|',
+        f'| Avg growth at price peak, {TOP_N} top-growth cities | {fmt_pct(n["top_n_avg_peak_growth_pct"])} | {fmt_pct(e["top_n_avg_peak_growth_pct"])} |',
+        f'| Avg growth at price peak, all cities ({n["n_cities"]} / {e["n_cities"]}) | {fmt_pct(n["all_avg_peak_growth_pct"])} | {fmt_pct(e["all_avg_peak_growth_pct"])} |',
+        f'| Biggest growth at price peak | **{n["biggest_peak_growth"]["city"]}** {fmt_pct(n["biggest_peak_growth"]["peak_growth_pct"])} (peak {n["biggest_peak_growth"]["peak_date"]}) | **{e["biggest_peak_growth"]["city"]}** {fmt_pct(e["biggest_peak_growth"]["peak_growth_pct"])} (peak {e["biggest_peak_growth"]["peak_date"]}) |',
+        f'| Smallest growth at price peak | **{n["smallest_peak_growth"]["city"]}** {fmt_pct(n["smallest_peak_growth"]["peak_growth_pct"])} (peak {n["smallest_peak_growth"]["peak_date"]}) | **{e["smallest_peak_growth"]["city"]}** {fmt_pct(e["smallest_peak_growth"]["peak_growth_pct"])} (peak {e["smallest_peak_growth"]["peak_date"]}) |',
+    ]
+    if n['excluded']:
+        lines += ['', f'_New Home stats exclude {", ".join(n["excluded"])} due to known data anomalies._']
+    return '\n'.join(lines)
+
+
+def update_readme_block(block, start_marker, end_marker):
     with open(README_PATH, 'r', encoding='utf-8') as f:
         readme = f.read()
-    if STATS_START not in readme or STATS_END not in readme:
-        raise RuntimeError(f'Markers {STATS_START} / {STATS_END} not found in README.md')
-    before, _, rest = readme.partition(STATS_START)
-    _, _, after = rest.partition(STATS_END)
-    new = f'{before}{STATS_START}\n{block}\n{STATS_END}{after}'
+    if start_marker not in readme or end_marker not in readme:
+        raise RuntimeError(f'Markers {start_marker} / {end_marker} not found in README.md')
+    before, _, rest = readme.partition(start_marker)
+    _, _, after = rest.partition(end_marker)
+    new = f'{before}{start_marker}\n{block}\n{end_marker}{after}'
     with open(README_PATH, 'w', encoding='utf-8') as f:
         f.write(new)
 
@@ -127,29 +174,38 @@ def main():
     as_of = as_of_date(df)
 
     summary = {}
+    growth_summary = {}
     per_city = {}
     for col, _ in INDICES:
-        drops = compute_drops(df, col)
-        per_city[col] = drops
-        filtered = {c: v for c, v in drops.items() if c not in EXCLUDE[col]}
+        stats = compute_city_stats(df, col)
+        per_city[col] = stats
+        filtered = {c: v for c, v in stats.items() if c not in EXCLUDE[col]}
         summary[col] = summarize(filtered)
         summary[col]['excluded'] = sorted(EXCLUDE[col])
+        growth_summary[col] = summarize_growth(filtered)
+        growth_summary[col]['excluded'] = sorted(EXCLUDE[col])
 
     block = build_block(as_of, summary)
+    growth_block = build_growth_block(as_of, growth_summary)
 
     with open(STATS_MD_PATH, 'w', encoding='utf-8') as f:
-        f.write(f'# Price Drop from Peak\n\n{block}\n')
+        f.write(
+            f'# Price Drop from Peak\n\n{block}\n\n'
+            f'# Growth at Price Peak\n\n{growth_block}\n'
+        )
 
     payload = {
         'as_of': as_of,
         'generated_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'summary': summary,
+        'growth_summary': growth_summary,
         'per_city': per_city,
     }
     with open(STATS_JSON_PATH, 'w', encoding='utf-8') as f:
         json.dump(payload, f, indent=2)
 
-    update_readme(block)
+    update_readme_block(block, STATS_START, STATS_END)
+    update_readme_block(growth_block, GROWTH_START, GROWTH_END)
     print(f'Stats written for as_of={as_of}')
 
 
