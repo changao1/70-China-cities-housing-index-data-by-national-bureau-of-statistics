@@ -12,8 +12,11 @@ import urllib.error
 
 LISTING_URL = "https://www.stats.gov.cn/sj/zxfb/"
 TITLE_PATTERN = r'(\d{4})年(\d{1,2})月份?70个大中城市商品住宅销售价格变动情况'
+# Tempered greedy token (?:(?!</a>).)*? prevents the match from spanning across
+# multiple <a> tags — without it, an earlier unrelated link could be paired with
+# a later housing-index title elsewhere on the listing page.
 LINK_PATTERN = re.compile(
-    r'href=["\'](\./\d+/t\d+_\d+\.html)["\'][^>]*>.*?' + TITLE_PATTERN,
+    r'href=["\'](\./\d+/t\d+_\d+\.html)["\'][^>]*>(?:(?!</a>).)*?' + TITLE_PATTERN,
     re.DOTALL
 )
 
@@ -39,12 +42,18 @@ def fetch_url(url, retries=3):
 
 def find_housing_links(html):
     """Find all housing index links on the listing page.
-    Returns list of (relative_url, year, month).
+    Returns list of (relative_url, year, month). Deduped — the listing markup
+    repeats the title in both the title="..." attribute and the link text.
     """
+    seen = set()
     results = []
     for match in LINK_PATTERN.finditer(html):
         rel_url, year, month = match.group(1), int(match.group(2)), int(match.group(3))
-        results.append((rel_url, year, month))
+        key = (rel_url, year, month)
+        if key in seen:
+            continue
+        seen.add(key)
+        results.append(key)
     return results
 
 
