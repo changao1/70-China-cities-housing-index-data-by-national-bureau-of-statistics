@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-04",
-  "generated_at": "2026-05-28T11:39:16Z",
+  "as_of": "2026-05",
+  "generated_at": "2026-06-28T10:28:35Z",
   "summary": {
     "new_home_price_index": {
       "n_cities": 69,
       "top_n": 30,
-      "top_n_avg_drop_pct": -20.055,
-      "all_avg_drop_pct": -15.2491,
+      "top_n_avg_drop_pct": -20.3003,
+      "all_avg_drop_pct": -15.4217,
       "biggest_drop": {
         "city": "Luzhou",
-        "drop_pct": -25.8622,
+        "drop_pct": -26.3812,
         "peak_date": "2019-05"
       },
       "smallest_drop": {
         "city": "Hangzhou",
-        "drop_pct": -0.0023,
-        "peak_date": "2025-10"
+        "drop_pct": 0.0,
+        "peak_date": "2026-05"
       },
       "excluded": [
         "Shanghai"
@@ -24,16 +24,16 @@
     "existing_home_price_index": {
       "n_cities": 70,
       "top_n": 30,
-      "top_n_avg_drop_pct": -28.7418,
-      "all_avg_drop_pct": -24.2844,
+      "top_n_avg_drop_pct": -28.9512,
+      "all_avg_drop_pct": -24.4792,
       "biggest_drop": {
         "city": "Mudanjiang",
-        "drop_pct": -44.1431,
+        "drop_pct": -44.2548,
         "peak_date": "2011-04"
       },
       "smallest_drop": {
         "city": "Shanghai",
-        "drop_pct": -13.3239,
+        "drop_pct": -12.8039,
         "peak_date": "2023-03"
       },
       "excluded": []
@@ -43,8 +43,8 @@
     "new_home_price_index": {
       "n_cities": 69,
       "top_n": 30,
-      "top_n_avg_peak_growth_pct": 83.6716,
-      "all_avg_peak_growth_pct": 60.3676,
+      "top_n_avg_peak_growth_pct": 83.6996,
+      "all_avg_peak_growth_pct": 60.3798,
       "biggest_peak_growth": {
         "city": "Shenzhen",
         "peak_growth_pct": 149.4248,
@@ -81,200 +81,200 @@
     "new_home_price_index": {
       "Sanya": {
         "peak": 153.4151,
-        "current": 145.1762,
-        "drop_pct": -5.3703,
+        "current": 144.4503,
+        "drop_pct": -5.8435,
         "peak_date": "2023-10",
         "baseline": 100.0,
         "peak_growth_pct": 53.4151
       },
       "Shanghai": {
-        "peak": 251.5013,
-        "current": 251.5013,
+        "peak": 252.0043,
+        "current": 252.0043,
         "drop_pct": 0.0,
-        "peak_date": "2026-04",
+        "peak_date": "2026-05",
         "baseline": 100.0,
-        "peak_growth_pct": 151.5013
+        "peak_growth_pct": 152.0043
       },
       "Dandong": {
         "peak": 140.5832,
-        "current": 117.4818,
-        "drop_pct": -16.4326,
+        "current": 117.0118,
+        "drop_pct": -16.7669,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 40.5832
       },
       "Urumqi": {
         "peak": 145.2717,
-        "current": 138.3033,
-        "drop_pct": -4.7968,
+        "current": 138.165,
+        "drop_pct": -4.892,
         "peak_date": "2023-05",
         "baseline": 100.0,
         "peak_growth_pct": 45.2717
       },
       "Jiujiang": {
         "peak": 153.4535,
-        "current": 125.788,
-        "drop_pct": -18.0286,
+        "current": 125.4106,
+        "drop_pct": -18.2745,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 53.4535
       },
       "Lanzhou": {
         "peak": 145.9636,
-        "current": 117.3768,
-        "drop_pct": -19.5849,
+        "current": 117.2594,
+        "drop_pct": -19.6653,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 45.9636
       },
       "Baotou": {
         "peak": 128.9904,
-        "current": 99.9747,
-        "drop_pct": -22.4944,
+        "current": 99.3749,
+        "drop_pct": -22.9595,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 28.9904
       },
       "Beijing": {
         "peak": 212.0023,
-        "current": 194.2864,
-        "drop_pct": -8.3565,
+        "current": 193.8978,
+        "drop_pct": -8.5397,
         "peak_date": "2023-09",
         "baseline": 100.0,
         "peak_growth_pct": 112.0023
       },
       "Beihai": {
         "peak": 149.2687,
-        "current": 112.6447,
-        "drop_pct": -24.5356,
+        "current": 112.3067,
+        "drop_pct": -24.762,
         "peak_date": "2020-02",
         "baseline": 100.0,
         "peak_growth_pct": 49.2687
       },
       "Nanjing": {
         "peak": 198.9623,
-        "current": 173.7033,
-        "drop_pct": -12.6954,
+        "current": 173.0085,
+        "drop_pct": -13.0446,
         "peak_date": "2023-04",
         "baseline": 100.0,
         "peak_growth_pct": 98.9623
       },
       "Nanchong": {
         "peak": 134.5515,
-        "current": 114.6837,
-        "drop_pct": -14.7659,
+        "current": 113.9956,
+        "drop_pct": -15.2773,
         "peak_date": "2020-05",
         "baseline": 100.0,
         "peak_growth_pct": 34.5515
       },
       "Nanning": {
         "peak": 176.3185,
-        "current": 148.3191,
-        "drop_pct": -15.88,
+        "current": 148.4674,
+        "drop_pct": -15.7959,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 76.3185
       },
       "Nanchang": {
         "peak": 159.9021,
-        "current": 136.8713,
-        "drop_pct": -14.403,
+        "current": 136.5976,
+        "drop_pct": -14.5742,
         "peak_date": "2023-06",
         "baseline": 100.0,
         "peak_growth_pct": 59.9021
       },
       "Xiamen": {
         "peak": 216.9313,
-        "current": 178.1416,
-        "drop_pct": -17.8811,
+        "current": 178.4979,
+        "drop_pct": -17.7168,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 116.9313
       },
       "Hefei": {
         "peak": 194.8165,
-        "current": 183.9782,
-        "drop_pct": -5.5633,
+        "current": 184.1622,
+        "drop_pct": -5.4689,
         "peak_date": "2023-05",
         "baseline": 100.0,
         "peak_growth_pct": 94.8165
       },
       "Jilin": {
         "peak": 150.8818,
-        "current": 132.134,
-        "drop_pct": -12.4255,
+        "current": 131.8697,
+        "drop_pct": -12.6006,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 50.8818
       },
       "Hohhot": {
         "peak": 164.5724,
-        "current": 139.3173,
-        "drop_pct": -15.3459,
+        "current": 138.76,
+        "drop_pct": -15.6845,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 64.5724
       },
       "Harbin": {
         "peak": 153.7177,
-        "current": 123.5051,
-        "drop_pct": -19.6546,
+        "current": 123.1346,
+        "drop_pct": -19.8956,
         "peak_date": "2020-08",
         "baseline": 100.0,
         "peak_growth_pct": 53.7177
       },
       "Tangshan": {
         "peak": 150.6428,
-        "current": 120.5495,
-        "drop_pct": -19.9766,
+        "current": 119.8262,
+        "drop_pct": -20.4568,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 50.6428
       },
       "Dali": {
         "peak": 152.7478,
-        "current": 120.768,
-        "drop_pct": -20.9363,
+        "current": 120.6473,
+        "drop_pct": -21.0154,
         "peak_date": "2020-09",
         "baseline": 100.0,
         "peak_growth_pct": 52.7478
       },
       "Dalian": {
         "peak": 159.4811,
-        "current": 135.6879,
-        "drop_pct": -14.9191,
+        "current": 135.8236,
+        "drop_pct": -14.8341,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 59.4811
       },
       "Tianjin": {
         "peak": 151.9991,
-        "current": 136.6289,
-        "drop_pct": -10.1121,
+        "current": 136.4923,
+        "drop_pct": -10.202,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 51.9991
       },
       "Taiyuan": {
         "peak": 144.8691,
-        "current": 131.815,
-        "drop_pct": -9.0109,
+        "current": 132.2104,
+        "drop_pct": -8.738,
         "peak_date": "2020-06",
         "baseline": 100.0,
         "peak_growth_pct": 44.8691
       },
       "Ningbo": {
         "peak": 147.3316,
-        "current": 131.7575,
-        "drop_pct": -10.5708,
+        "current": 132.021,
+        "drop_pct": -10.3919,
         "peak_date": "2023-06",
         "baseline": 100.0,
         "peak_growth_pct": 47.3316
       },
       "Anqing": {
         "peak": 124.8669,
-        "current": 100.4331,
-        "drop_pct": -19.5679,
+        "current": 99.8305,
+        "drop_pct": -20.0505,
         "peak_date": "2019-10",
         "baseline": 100.0,
         "peak_growth_pct": 24.8669
@@ -289,64 +289,64 @@
       },
       "Yueyang": {
         "peak": 126.529,
-        "current": 96.576,
-        "drop_pct": -23.6728,
+        "current": 96.0932,
+        "drop_pct": -24.0544,
         "peak_date": "2018-11",
         "baseline": 100.0,
         "peak_growth_pct": 26.529
       },
       "Changde": {
         "peak": 133.1773,
-        "current": 101.054,
-        "drop_pct": -24.1207,
+        "current": 100.4477,
+        "drop_pct": -24.5759,
         "peak_date": "2019-10",
         "baseline": 100.0,
         "peak_growth_pct": 33.1773
       },
       "Pingdingshan": {
         "peak": 145.3338,
-        "current": 132.1304,
-        "drop_pct": -9.0849,
+        "current": 131.9982,
+        "drop_pct": -9.1758,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 45.3338
       },
       "Guangzhou": {
         "peak": 221.2829,
-        "current": 182.1149,
-        "drop_pct": -17.7004,
+        "current": 182.4792,
+        "drop_pct": -17.5358,
         "peak_date": "2022-07",
         "baseline": 100.0,
         "peak_growth_pct": 121.2829
       },
       "Xuzhou": {
         "peak": 196.0386,
-        "current": 162.4758,
-        "drop_pct": -17.1205,
+        "current": 162.6383,
+        "drop_pct": -17.0376,
         "peak_date": "2023-07",
         "baseline": 100.0,
         "peak_growth_pct": 96.0386
       },
       "Huizhou": {
         "peak": 160.5446,
-        "current": 129.8875,
-        "drop_pct": -19.0957,
+        "current": 129.1081,
+        "drop_pct": -19.5811,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 60.5446
       },
       "Chengdu": {
         "peak": 174.919,
-        "current": 162.5327,
-        "drop_pct": -7.0811,
+        "current": 162.3702,
+        "drop_pct": -7.174,
         "peak_date": "2023-12",
         "baseline": 100.0,
         "peak_growth_pct": 74.919
       },
       "Yangzhou": {
         "peak": 175.9598,
-        "current": 143.641,
-        "drop_pct": -18.3672,
+        "current": 143.21,
+        "drop_pct": -18.6121,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 75.9598
@@ -361,280 +361,280 @@
       },
       "Kunming": {
         "peak": 167.0802,
-        "current": 132.453,
-        "drop_pct": -20.7249,
+        "current": 132.1881,
+        "drop_pct": -20.8835,
         "peak_date": "2021-04",
         "baseline": 100.0,
         "peak_growth_pct": 67.0802
       },
       "Hangzhou": {
-        "peak": 169.0257,
-        "current": 169.0218,
-        "drop_pct": -0.0023,
-        "peak_date": "2025-10",
+        "peak": 169.8669,
+        "current": 169.8669,
+        "drop_pct": 0.0,
+        "peak_date": "2026-05",
         "baseline": 100.0,
-        "peak_growth_pct": 69.0257
+        "peak_growth_pct": 69.8669
       },
       "Guilin": {
         "peak": 141.1242,
-        "current": 116.0504,
-        "drop_pct": -17.7672,
+        "current": 115.5862,
+        "drop_pct": -18.0961,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 41.1242
       },
       "Wuhan": {
         "peak": 198.803,
-        "current": 164.3813,
-        "drop_pct": -17.3145,
+        "current": 164.71,
+        "drop_pct": -17.1491,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 98.803
       },
       "Shenyang": {
         "peak": 165.0506,
-        "current": 145.5913,
-        "drop_pct": -11.7898,
+        "current": 145.8825,
+        "drop_pct": -11.6134,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 65.0506
       },
       "Quanzhou": {
         "peak": 128.4867,
-        "current": 107.5351,
-        "drop_pct": -16.3065,
+        "current": 107.1049,
+        "drop_pct": -16.6412,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 28.4867
       },
       "Luzhou": {
         "peak": 128.8251,
-        "current": 95.5081,
-        "drop_pct": -25.8622,
+        "current": 94.8395,
+        "drop_pct": -26.3812,
         "peak_date": "2019-05",
         "baseline": 100.0,
         "peak_growth_pct": 28.8251
       },
       "Luoyang": {
         "peak": 163.7784,
-        "current": 133.0606,
-        "drop_pct": -18.7557,
+        "current": 132.3953,
+        "drop_pct": -19.1619,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 63.7784
       },
       "Jinan": {
         "peak": 163.8838,
-        "current": 146.4602,
-        "drop_pct": -10.6317,
+        "current": 146.3137,
+        "drop_pct": -10.721,
         "peak_date": "2023-07",
         "baseline": 100.0,
         "peak_growth_pct": 63.8838
       },
       "Jining": {
         "peak": 163.3947,
-        "current": 134.0976,
-        "drop_pct": -17.9303,
+        "current": 133.9635,
+        "drop_pct": -18.0123,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 63.3947
       },
       "Haikou": {
         "peak": 152.6625,
-        "current": 135.6186,
-        "drop_pct": -11.1644,
+        "current": 135.2118,
+        "drop_pct": -11.4309,
         "peak_date": "2023-09",
         "baseline": 100.0,
         "peak_growth_pct": 52.6625
       },
       "Shenzhen": {
         "peak": 249.4248,
-        "current": 209.4421,
-        "drop_pct": -16.03,
+        "current": 210.2798,
+        "drop_pct": -15.6941,
         "peak_date": "2022-06",
         "baseline": 100.0,
         "peak_growth_pct": 149.4248
       },
       "Wenzhou": {
         "peak": 100.8021,
-        "current": 77.294,
-        "drop_pct": -23.321,
+        "current": 77.0622,
+        "drop_pct": -23.551,
         "peak_date": "2011-07",
         "baseline": 100.0,
         "peak_growth_pct": 0.8021
       },
       "Zhanjiang": {
         "peak": 143.6263,
-        "current": 111.1219,
-        "drop_pct": -22.6313,
+        "current": 111.0107,
+        "drop_pct": -22.7086,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 43.6263
       },
       "Yantai": {
         "peak": 158.1075,
-        "current": 135.2009,
-        "drop_pct": -14.488,
+        "current": 135.0657,
+        "drop_pct": -14.5736,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 58.1075
       },
       "Mudanjiang": {
         "peak": 128.4151,
-        "current": 104.946,
-        "drop_pct": -18.276,
+        "current": 104.5262,
+        "drop_pct": -18.6029,
         "peak_date": "2020-02",
         "baseline": 100.0,
         "peak_growth_pct": 28.4151
       },
       "Shijiazhuang": {
         "peak": 180.001,
-        "current": 156.3955,
-        "drop_pct": -13.1141,
+        "current": 156.2391,
+        "drop_pct": -13.201,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 80.001
       },
       "Fuzhou": {
         "peak": 176.1518,
-        "current": 146.4255,
-        "drop_pct": -16.8754,
+        "current": 145.8397,
+        "drop_pct": -17.2079,
         "peak_date": "2022-02",
         "baseline": 100.0,
         "peak_growth_pct": 76.1518
       },
       "Qinhuangdao": {
         "peak": 156.7151,
-        "current": 119.0524,
-        "drop_pct": -24.0326,
+        "current": 118.5762,
+        "drop_pct": -24.3365,
         "peak_date": "2020-09",
         "baseline": 100.0,
         "peak_growth_pct": 56.7151
       },
       "Bengbu": {
         "peak": 136.7009,
-        "current": 116.7804,
-        "drop_pct": -14.5724,
+        "current": 116.3133,
+        "drop_pct": -14.9141,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 36.7009
       },
       "Xiangyang": {
         "peak": 149.8948,
-        "current": 121.4072,
-        "drop_pct": -19.0051,
+        "current": 120.5573,
+        "drop_pct": -19.572,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 49.8948
       },
       "Xining": {
         "peak": 171.4838,
-        "current": 141.5679,
-        "drop_pct": -17.4453,
+        "current": 140.8601,
+        "drop_pct": -17.8581,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 71.4838
       },
       "Xi'an": {
         "peak": 229.6481,
-        "current": 209.8318,
-        "drop_pct": -8.629,
+        "current": 208.9924,
+        "drop_pct": -8.9945,
         "peak_date": "2024-07",
         "baseline": 100.0,
         "peak_growth_pct": 129.6481
       },
       "Guiyang": {
         "peak": 166.4161,
-        "current": 143.4417,
-        "drop_pct": -13.8054,
+        "current": 143.2983,
+        "drop_pct": -13.8916,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 66.4161
       },
       "Ganzhou": {
         "peak": 142.4821,
-        "current": 122.0759,
-        "drop_pct": -14.3219,
+        "current": 121.8318,
+        "drop_pct": -14.4933,
         "peak_date": "2022-07",
         "baseline": 100.0,
         "peak_growth_pct": 42.4821
       },
       "Zunyi": {
         "peak": 139.0835,
-        "current": 124.4077,
-        "drop_pct": -10.5518,
+        "current": 124.0345,
+        "drop_pct": -10.8201,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 39.0835
       },
       "Zhengzhou": {
         "peak": 176.5363,
-        "current": 144.7136,
-        "drop_pct": -18.0261,
+        "current": 144.4242,
+        "drop_pct": -18.1901,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 76.5363
       },
       "Chongqing": {
         "peak": 173.0365,
-        "current": 155.3976,
-        "drop_pct": -10.1938,
+        "current": 154.776,
+        "drop_pct": -10.553,
         "peak_date": "2023-09",
         "baseline": 100.0,
         "peak_growth_pct": 73.0365
       },
       "Jinhua": {
         "peak": 142.5134,
-        "current": 112.6641,
-        "drop_pct": -20.9449,
+        "current": 112.4388,
+        "drop_pct": -21.103,
         "peak_date": "2022-04",
         "baseline": 100.0,
         "peak_growth_pct": 42.5134
       },
       "Yinchuan": {
         "peak": 179.1822,
-        "current": 160.7883,
-        "drop_pct": -10.2654,
+        "current": 160.9491,
+        "drop_pct": -10.1757,
         "peak_date": "2023-06",
         "baseline": 100.0,
         "peak_growth_pct": 79.1822
       },
       "Jinzhou": {
         "peak": 136.5906,
-        "current": 118.8042,
-        "drop_pct": -13.0216,
+        "current": 118.6854,
+        "drop_pct": -13.1086,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 36.5906
       },
       "Changchun": {
         "peak": 152.2724,
-        "current": 132.0462,
-        "drop_pct": -13.2829,
+        "current": 132.3103,
+        "drop_pct": -13.1095,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 52.2724
       },
       "Changsha": {
         "peak": 192.9467,
-        "current": 173.9927,
-        "drop_pct": -9.8234,
+        "current": 173.2968,
+        "drop_pct": -10.1841,
         "peak_date": "2023-10",
         "baseline": 100.0,
         "peak_growth_pct": 92.9467
       },
       "Qingdao": {
         "peak": 150.5918,
-        "current": 134.4533,
-        "drop_pct": -10.7167,
+        "current": 134.8566,
+        "drop_pct": -10.4489,
         "peak_date": "2023-06",
         "baseline": 100.0,
         "peak_growth_pct": 50.5918
       },
       "Shaoguan": {
         "peak": 127.1344,
-        "current": 106.2128,
-        "drop_pct": -16.4563,
+        "current": 105.5755,
+        "drop_pct": -16.9576,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 27.1344
@@ -643,112 +643,112 @@
     "existing_home_price_index": {
       "Sanya": {
         "peak": 119.5451,
-        "current": 98.9778,
-        "drop_pct": -17.2046,
+        "current": 98.384,
+        "drop_pct": -17.7014,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 19.5451
       },
       "Shanghai": {
         "peak": 200.0492,
-        "current": 173.3948,
-        "drop_pct": -13.3239,
+        "current": 174.4352,
+        "drop_pct": -12.8039,
         "peak_date": "2023-03",
         "baseline": 100.0,
         "peak_growth_pct": 100.0492
       },
       "Dandong": {
         "peak": 119.6869,
-        "current": 88.3762,
-        "drop_pct": -26.1605,
+        "current": 88.1994,
+        "drop_pct": -26.3082,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 19.6869
       },
       "Urumqi": {
         "peak": 141.9673,
-        "current": 115.4776,
-        "drop_pct": -18.659,
+        "current": 115.0157,
+        "drop_pct": -18.9844,
         "peak_date": "2021-04",
         "baseline": 100.0,
         "peak_growth_pct": 41.9673
       },
       "Jiujiang": {
         "peak": 136.7807,
-        "current": 103.0471,
-        "drop_pct": -24.6626,
+        "current": 102.7379,
+        "drop_pct": -24.8886,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 36.7807
       },
       "Lanzhou": {
         "peak": 119.0737,
-        "current": 89.4478,
-        "drop_pct": -24.8803,
+        "current": 89.3584,
+        "drop_pct": -24.9554,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 19.0737
       },
       "Baotou": {
         "peak": 113.2536,
-        "current": 81.8038,
-        "drop_pct": -27.7693,
+        "current": 81.3948,
+        "drop_pct": -28.1305,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 13.2536
       },
       "Beijing": {
         "peak": 224.0122,
-        "current": 189.4847,
-        "drop_pct": -15.4132,
+        "current": 189.6741,
+        "drop_pct": -15.3287,
         "peak_date": "2023-04",
         "baseline": 100.0,
         "peak_growth_pct": 124.0122
       },
       "Beihai": {
         "peak": 127.7439,
-        "current": 90.8115,
-        "drop_pct": -28.9113,
+        "current": 90.4483,
+        "drop_pct": -29.1956,
         "peak_date": "2019-08",
         "baseline": 100.0,
         "peak_growth_pct": 27.7439
       },
       "Nanjing": {
         "peak": 170.4904,
-        "current": 130.7597,
-        "drop_pct": -23.3038,
+        "current": 130.6289,
+        "drop_pct": -23.3805,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 70.4904
       },
       "Nanchong": {
         "peak": 122.7051,
-        "current": 94.5988,
-        "drop_pct": -22.9056,
+        "current": 94.315,
+        "drop_pct": -23.1369,
         "peak_date": "2019-09",
         "baseline": 100.0,
         "peak_growth_pct": 22.7051
       },
       "Nanning": {
         "peak": 146.151,
-        "current": 105.1542,
-        "drop_pct": -28.051,
+        "current": 104.6284,
+        "drop_pct": -28.4108,
         "peak_date": "2021-02",
         "baseline": 100.0,
         "peak_growth_pct": 46.151
       },
       "Nanchang": {
         "peak": 134.9007,
-        "current": 101.9092,
-        "drop_pct": -24.4561,
+        "current": 101.5016,
+        "drop_pct": -24.7583,
         "peak_date": "2019-05",
         "baseline": 100.0,
         "peak_growth_pct": 34.9007
       },
       "Xiamen": {
         "peak": 171.2479,
-        "current": 126.1245,
-        "drop_pct": -26.3497,
+        "current": 126.2507,
+        "drop_pct": -26.2761,
         "peak_date": "2022-06",
         "baseline": 100.0,
         "peak_growth_pct": 71.2479
@@ -763,168 +763,168 @@
       },
       "Jilin": {
         "peak": 120.8935,
-        "current": 88.6606,
-        "drop_pct": -26.6623,
+        "current": 88.5719,
+        "drop_pct": -26.7356,
         "peak_date": "2020-03",
         "baseline": 100.0,
         "peak_growth_pct": 20.8935
       },
       "Hohhot": {
         "peak": 134.76,
-        "current": 97.4385,
-        "drop_pct": -27.6948,
+        "current": 96.9513,
+        "drop_pct": -28.0563,
         "peak_date": "2019-10",
         "baseline": 100.0,
         "peak_growth_pct": 34.76
       },
       "Harbin": {
         "peak": 134.4066,
-        "current": 94.5768,
-        "drop_pct": -29.6338,
+        "current": 94.1039,
+        "drop_pct": -29.9856,
         "peak_date": "2020-04",
         "baseline": 100.0,
         "peak_growth_pct": 34.4066
       },
       "Tangshan": {
         "peak": 144.983,
-        "current": 99.5832,
-        "drop_pct": -31.3138,
+        "current": 99.0853,
+        "drop_pct": -31.6573,
         "peak_date": "2021-03",
         "baseline": 100.0,
         "peak_growth_pct": 44.983
       },
       "Dali": {
         "peak": 125.059,
-        "current": 94.7033,
-        "drop_pct": -24.2731,
+        "current": 94.1351,
+        "drop_pct": -24.7275,
         "peak_date": "2021-05",
         "baseline": 100.0,
         "peak_growth_pct": 25.059
       },
       "Dalian": {
         "peak": 134.7308,
-        "current": 102.3366,
-        "drop_pct": -24.0437,
+        "current": 102.4389,
+        "drop_pct": -23.9677,
         "peak_date": "2021-10",
         "baseline": 100.0,
         "peak_growth_pct": 34.7308
       },
       "Tianjin": {
         "peak": 143.5676,
-        "current": 109.9242,
-        "drop_pct": -23.4338,
+        "current": 109.4845,
+        "drop_pct": -23.7401,
         "peak_date": "2019-05",
         "baseline": 100.0,
         "peak_growth_pct": 43.5676
       },
       "Taiyuan": {
         "peak": 143.5178,
-        "current": 109.4373,
-        "drop_pct": -23.7465,
+        "current": 108.8901,
+        "drop_pct": -24.1278,
         "peak_date": "2019-09",
         "baseline": 100.0,
         "peak_growth_pct": 43.5178
       },
       "Ningbo": {
         "peak": 139.7254,
-        "current": 109.8948,
-        "drop_pct": -21.3494,
+        "current": 110.0047,
+        "drop_pct": -21.2708,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 39.7254
       },
       "Anqing": {
         "peak": 114.1409,
-        "current": 77.5683,
-        "drop_pct": -32.0416,
+        "current": 77.4132,
+        "drop_pct": -32.1775,
         "peak_date": "2018-11",
         "baseline": 100.0,
         "peak_growth_pct": 14.1409
       },
       "Yichang": {
         "peak": 125.9425,
-        "current": 90.1728,
-        "drop_pct": -28.4016,
+        "current": 90.0826,
+        "drop_pct": -28.4732,
         "peak_date": "2019-03",
         "baseline": 100.0,
         "peak_growth_pct": 25.9425
       },
       "Yueyang": {
         "peak": 117.451,
-        "current": 89.3951,
-        "drop_pct": -23.8874,
+        "current": 89.0375,
+        "drop_pct": -24.1918,
         "peak_date": "2019-07",
         "baseline": 100.0,
         "peak_growth_pct": 17.451
       },
       "Changde": {
         "peak": 123.0104,
-        "current": 86.3002,
-        "drop_pct": -29.8432,
+        "current": 85.8687,
+        "drop_pct": -30.194,
         "peak_date": "2019-03",
         "baseline": 100.0,
         "peak_growth_pct": 23.0104
       },
       "Pingdingshan": {
         "peak": 134.7437,
-        "current": 105.3872,
-        "drop_pct": -21.7869,
+        "current": 105.071,
+        "drop_pct": -22.0215,
         "peak_date": "2021-05",
         "baseline": 100.0,
         "peak_growth_pct": 34.7437
       },
       "Guangzhou": {
         "peak": 207.9145,
-        "current": 156.597,
-        "drop_pct": -24.682,
+        "current": 156.7536,
+        "drop_pct": -24.6067,
         "peak_date": "2022-07",
         "baseline": 100.0,
         "peak_growth_pct": 107.9145
       },
       "Xuzhou": {
         "peak": 138.7819,
-        "current": 100.5986,
-        "drop_pct": -27.5132,
+        "current": 100.9004,
+        "drop_pct": -27.2957,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 38.7819
       },
       "Huizhou": {
         "peak": 147.2787,
-        "current": 111.6194,
-        "drop_pct": -24.2121,
+        "current": 111.3962,
+        "drop_pct": -24.3637,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 47.2787
       },
       "Chengdu": {
         "peak": 149.0482,
-        "current": 128.9672,
-        "drop_pct": -13.4729,
+        "current": 128.4513,
+        "drop_pct": -13.819,
         "peak_date": "2023-06",
         "baseline": 100.0,
         "peak_growth_pct": 49.0482
       },
       "Yangzhou": {
         "peak": 137.4642,
-        "current": 101.8932,
-        "drop_pct": -25.8766,
+        "current": 101.2819,
+        "drop_pct": -26.3213,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 37.4642
       },
       "Wuxi": {
         "peak": 170.5126,
-        "current": 139.0479,
-        "drop_pct": -18.453,
+        "current": 138.9088,
+        "drop_pct": -18.5346,
         "peak_date": "2022-08",
         "baseline": 100.0,
         "peak_growth_pct": 70.5126
       },
       "Kunming": {
         "peak": 149.4113,
-        "current": 121.8513,
-        "drop_pct": -18.4457,
+        "current": 121.4857,
+        "drop_pct": -18.6904,
         "peak_date": "2023-05",
         "baseline": 100.0,
         "peak_growth_pct": 49.4113
@@ -939,16 +939,16 @@
       },
       "Guilin": {
         "peak": 111.481,
-        "current": 86.5695,
-        "drop_pct": -22.3459,
+        "current": 86.1367,
+        "drop_pct": -22.7342,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 11.481
       },
       "Wuhan": {
         "peak": 159.2236,
-        "current": 112.1145,
-        "drop_pct": -29.5868,
+        "current": 111.666,
+        "drop_pct": -29.8684,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 59.2236
@@ -963,240 +963,240 @@
       },
       "Quanzhou": {
         "peak": 121.0804,
-        "current": 87.4527,
-        "drop_pct": -27.773,
+        "current": 87.2778,
+        "drop_pct": -27.9174,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 21.0804
       },
       "Luzhou": {
         "peak": 125.1952,
-        "current": 94.7863,
-        "drop_pct": -24.2892,
+        "current": 94.1228,
+        "drop_pct": -24.8192,
         "peak_date": "2018-12",
         "baseline": 100.0,
         "peak_growth_pct": 25.1952
       },
       "Luoyang": {
         "peak": 142.304,
-        "current": 106.9113,
-        "drop_pct": -24.8712,
+        "current": 106.2698,
+        "drop_pct": -25.322,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 42.304
       },
       "Jinan": {
         "peak": 133.4401,
-        "current": 101.236,
-        "drop_pct": -24.1337,
+        "current": 101.0336,
+        "drop_pct": -24.2855,
         "peak_date": "2019-03",
         "baseline": 100.0,
         "peak_growth_pct": 33.4401
       },
       "Jining": {
         "peak": 145.9948,
-        "current": 110.6673,
-        "drop_pct": -24.1978,
+        "current": 110.3353,
+        "drop_pct": -24.4252,
         "peak_date": "2021-06",
         "baseline": 100.0,
         "peak_growth_pct": 45.9948
       },
       "Haikou": {
         "peak": 111.9313,
-        "current": 89.0278,
-        "drop_pct": -20.4621,
+        "current": 88.4936,
+        "drop_pct": -20.9393,
         "peak_date": "2022-06",
         "baseline": 100.0,
         "peak_growth_pct": 11.9313
       },
       "Shenzhen": {
         "peak": 278.8792,
-        "current": 220.3866,
-        "drop_pct": -20.9742,
+        "current": 221.709,
+        "drop_pct": -20.5,
         "peak_date": "2021-03",
         "baseline": 100.0,
         "peak_growth_pct": 178.8792
       },
       "Wenzhou": {
         "peak": 103.0189,
-        "current": 65.0775,
-        "drop_pct": -36.8296,
+        "current": 64.9473,
+        "drop_pct": -36.9559,
         "peak_date": "2011-02",
         "baseline": 100.0,
         "peak_growth_pct": 3.0189
       },
       "Zhanjiang": {
         "peak": 114.4511,
-        "current": 84.1754,
-        "drop_pct": -26.4529,
+        "current": 83.6704,
+        "drop_pct": -26.8942,
         "peak_date": "2018-11",
         "baseline": 100.0,
         "peak_growth_pct": 14.4511
       },
       "Yantai": {
         "peak": 122.9878,
-        "current": 93.2056,
-        "drop_pct": -24.2156,
+        "current": 93.1124,
+        "drop_pct": -24.2914,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 22.9878
       },
       "Mudanjiang": {
         "peak": 104.6453,
-        "current": 58.4516,
-        "drop_pct": -44.1431,
+        "current": 58.3347,
+        "drop_pct": -44.2548,
         "peak_date": "2011-04",
         "baseline": 100.0,
         "peak_growth_pct": 4.6453
       },
       "Shijiazhuang": {
         "peak": 125.7939,
-        "current": 94.8004,
-        "drop_pct": -24.6383,
+        "current": 94.6108,
+        "drop_pct": -24.789,
         "peak_date": "2019-06",
         "baseline": 100.0,
         "peak_growth_pct": 25.7939
       },
       "Fuzhou": {
         "peak": 139.666,
-        "current": 106.3849,
-        "drop_pct": -23.829,
+        "current": 106.0657,
+        "drop_pct": -24.0576,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 39.666
       },
       "Qinhuangdao": {
         "peak": 126.729,
-        "current": 89.2717,
-        "drop_pct": -29.557,
+        "current": 88.9146,
+        "drop_pct": -29.8388,
         "peak_date": "2020-11",
         "baseline": 100.0,
         "peak_growth_pct": 26.729
       },
       "Bengbu": {
         "peak": 131.3875,
-        "current": 105.055,
-        "drop_pct": -20.0419,
+        "current": 104.7398,
+        "drop_pct": -20.2818,
         "peak_date": "2021-08",
         "baseline": 100.0,
         "peak_growth_pct": 31.3875
       },
       "Xiangyang": {
         "peak": 129.2151,
-        "current": 91.48,
-        "drop_pct": -29.2034,
+        "current": 90.9311,
+        "drop_pct": -29.6282,
         "peak_date": "2019-10",
         "baseline": 100.0,
         "peak_growth_pct": 29.2151
       },
       "Xining": {
         "peak": 147.8216,
-        "current": 123.6401,
-        "drop_pct": -16.3586,
+        "current": 123.5165,
+        "drop_pct": -16.4422,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 47.8216
       },
       "Xi'an": {
         "peak": 125.2157,
-        "current": 100.8897,
-        "drop_pct": -19.4273,
+        "current": 100.6879,
+        "drop_pct": -19.5884,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 25.2157
       },
       "Guiyang": {
         "peak": 138.7074,
-        "current": 102.9722,
-        "drop_pct": -25.763,
+        "current": 102.6633,
+        "drop_pct": -25.9857,
         "peak_date": "2019-05",
         "baseline": 100.0,
         "peak_growth_pct": 38.7074
       },
       "Ganzhou": {
         "peak": 127.7566,
-        "current": 109.1291,
-        "drop_pct": -14.5805,
+        "current": 108.4743,
+        "drop_pct": -15.093,
         "peak_date": "2022-06",
         "baseline": 100.0,
         "peak_growth_pct": 27.7566
       },
       "Zunyi": {
         "peak": 121.7364,
-        "current": 93.4091,
-        "drop_pct": -23.2694,
+        "current": 92.7552,
+        "drop_pct": -23.8065,
         "peak_date": "2019-03",
         "baseline": 100.0,
         "peak_growth_pct": 21.7364
       },
       "Zhengzhou": {
         "peak": 144.8935,
-        "current": 98.431,
-        "drop_pct": -32.0666,
+        "current": 98.5295,
+        "drop_pct": -31.9987,
         "peak_date": "2017-06",
         "baseline": 100.0,
         "peak_growth_pct": 44.8935
       },
       "Chongqing": {
         "peak": 133.7933,
-        "current": 108.128,
-        "drop_pct": -19.1828,
+        "current": 108.2362,
+        "drop_pct": -19.1019,
         "peak_date": "2021-09",
         "baseline": 100.0,
         "peak_growth_pct": 33.7933
       },
       "Jinhua": {
         "peak": 122.368,
-        "current": 87.6687,
-        "drop_pct": -28.3565,
+        "current": 87.4934,
+        "drop_pct": -28.4998,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 22.368
       },
       "Yinchuan": {
         "peak": 136.088,
-        "current": 109.4694,
-        "drop_pct": -19.5599,
+        "current": 109.2504,
+        "drop_pct": -19.7208,
         "peak_date": "2021-07",
         "baseline": 100.0,
         "peak_growth_pct": 36.088
       },
       "Jinzhou": {
         "peak": 102.2119,
-        "current": 71.1551,
-        "drop_pct": -30.3847,
+        "current": 71.0128,
+        "drop_pct": -30.5239,
         "peak_date": "2014-04",
         "baseline": 100.0,
         "peak_growth_pct": 2.2119
       },
       "Changchun": {
         "peak": 129.4959,
-        "current": 97.6777,
-        "drop_pct": -24.5709,
+        "current": 97.4823,
+        "drop_pct": -24.7217,
         "peak_date": "2020-06",
         "baseline": 100.0,
         "peak_growth_pct": 29.4959
       },
       "Changsha": {
         "peak": 150.1233,
-        "current": 120.2473,
-        "drop_pct": -19.901,
+        "current": 119.5259,
+        "drop_pct": -20.3816,
         "peak_date": "2023-06",
         "baseline": 100.0,
         "peak_growth_pct": 50.1233
       },
       "Qingdao": {
         "peak": 128.6625,
-        "current": 94.1553,
-        "drop_pct": -26.82,
+        "current": 93.967,
+        "drop_pct": -26.9663,
         "peak_date": "2018-11",
         "baseline": 100.0,
         "peak_growth_pct": 28.6625
       },
       "Shaoguan": {
         "peak": 121.939,
-        "current": 94.6819,
-        "drop_pct": -22.3531,
+        "current": 94.2085,
+        "drop_pct": -22.7413,
         "peak_date": "2019-08",
         "baseline": 100.0,
         "peak_growth_pct": 21.939
