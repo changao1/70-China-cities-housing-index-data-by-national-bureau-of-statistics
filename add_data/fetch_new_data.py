@@ -1,6 +1,6 @@
 """
 Fetch the latest housing index HTML from stats.gov.cn.
-Checks the listing page for new monthly data, downloads if not already present.
+Checks the listing pages for new monthly data, downloads if not already present.
 """
 
 import os
@@ -11,6 +11,11 @@ import urllib.request
 import urllib.error
 
 LISTING_URL = "https://www.stats.gov.cn/sj/zxfb/"
+# The first listing page only holds ~2 weeks of releases, while the housing
+# index comes out around the 15th-18th. A run late in the month can therefore
+# miss it entirely (2026-06 data, published 2026-07-15, was lost this way), so
+# fall back to the paginated older pages too.
+LISTING_PAGES = 3
 TITLE_PATTERN = r'(\d{4})年(\d{1,2})月份?70个大中城市商品住宅销售价格变动情况'
 # Tempered greedy token (?:(?!</a>).)*? prevents the match from spanning across
 # multiple <a> tags — without it, an earlier unrelated link could be paired with
@@ -57,18 +62,37 @@ def find_housing_links(html):
     return results
 
 
+def listing_page_urls():
+    """URLs of the listing pages to scan: the index, then the older pages."""
+    yield LISTING_URL
+    for page in range(1, LISTING_PAGES):
+        yield f"{LISTING_URL}index_{page}.html"
+
+
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    print(f"Fetching listing page: {LISTING_URL}")
-    listing_html = fetch_url(LISTING_URL)
-    if not listing_html:
-        print("ERROR: Failed to fetch listing page")
+    links = []
+    seen = set()
+    fetched_any = False
+    for url in listing_page_urls():
+        print(f"Fetching listing page: {url}")
+        listing_html = fetch_url(url)
+        if not listing_html:
+            print(f"  WARNING: Failed to fetch {url}")
+            continue
+        fetched_any = True
+        for key in find_housing_links(listing_html):
+            if key not in seen:
+                seen.add(key)
+                links.append(key)
+
+    if not fetched_any:
+        print("ERROR: Failed to fetch any listing page")
         sys.exit(1)
 
-    links = find_housing_links(listing_html)
     if not links:
-        print("No housing index links found on listing page")
+        print("No housing index links found on listing pages")
         sys.exit(0)
 
     print(f"Found {len(links)} housing index link(s)")

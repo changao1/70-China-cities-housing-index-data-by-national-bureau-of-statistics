@@ -2,7 +2,10 @@ name: Update Housing Data
 
 on:
   schedule:
-    # Run on the 28th of each month at 08:00 UTC (16:00 Beijing time)
+    # NBS publishes the 70-city index around the 15th-18th of each month.
+    # Run on the 20th (shortly after publication, while it is still on the
+    # first listing page) and again on the 28th as a retry.
+    - cron: '0 8 20 * *'
     - cron: '0 8 28 * *'
   workflow_dispatch: # Allow manual trigger
 
