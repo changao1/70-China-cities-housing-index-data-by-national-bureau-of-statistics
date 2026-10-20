@@ -24,14 +24,14 @@ The dataset (`merged_housing_data_eng.csv`) contains monthly residential housing
 ## Price Drop from Peak
 
 <!-- STATS_START -->
-_As of 2026-08. Peak = each city's all-time high cumulative index since Dec 2010 (base=100). Drop is expressed as a negative percent; 0% means the city is still at its peak._
+_As of 2026-09. Peak = each city's all-time high cumulative index since Dec 2010 (base=100). Drop is expressed as a negative percent; 0% means the city is still at its peak._
 
 | Metric | New Home | Existing Home |
 |---|---|---|
-| Avg drop, 30 worst-hit cities | -20.96% | -29.74% |
-| Avg drop, all cities (69 / 70) | -15.86% | -25.16% |
-| Biggest drop | **Luzhou** -27.63% (peak 2019-05) | **Mudanjiang** -44.53% (peak 2011-04) |
-| Smallest drop | **Hangzhou** 0.00% (peak 2026-08) | **Shanghai** -11.93% (peak 2023-03) |
+| Avg drop, 30 worst-hit cities | -21.21% | -29.97% |
+| Avg drop, all cities (69 / 70) | -15.97% | -25.35% |
+| Biggest drop | **Luzhou** -27.99% (peak 2019-05) | **Mudanjiang** -44.64% (peak 2011-04) |
+| Smallest drop | **Hangzhou** 0.00% (peak 2026-09) | **Shanghai** -11.49% (peak 2023-03) |
 
 _New Home stats exclude Shanghai due to known data anomalies._
 <!-- STATS_END -->
@@ -39,7 +39,7 @@ _New Home stats exclude Shanghai due to known data anomalies._
 ## Growth at Price Peak
 
 <!-- GROWTH_START -->
-_As of 2026-08. Growth at price peak = each city's cumulative growth from Dec 2010 (base=100, period 0) to its all-time peak. Measures how much prices rose at each city's highest point relative to the start of the series._
+_As of 2026-09. Growth at price peak = each city's cumulative growth from Dec 2010 (base=100, period 0) to its all-time peak. Measures how much prices rose at each city's highest point relative to the start of the series._
 
 | Metric | New Home | Existing Home |
 |---|---|---|
